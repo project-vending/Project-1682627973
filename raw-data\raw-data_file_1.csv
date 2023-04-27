@@ -1,0 +1,10 @@
+python
+import os
+
+# Check if the 'raw-data' folder exists, and create it if it doesn't
+if not os.path.exists('raw-data'):
+    os.mkdir('raw-data')
+
+# Create an empty file in the 'raw-data' folder
+with open('raw-data/raw-data_file_1.csv', 'w') as f:
+    pass
