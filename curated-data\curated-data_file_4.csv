@@ -1,0 +1,25 @@
+python
+import csv
+import os
+
+# Create the folder if it doesn't exist already
+folder_name = 'curated-data'
+if not os.path.exists(folder_name):
+    os.makedirs(folder_name)
+
+# Define the file name
+file_name = folder_name + '/curated-data_file_4.csv'
+
+# Write headers to the file
+with open(file_name, 'w', newline='') as csvfile:
+    fieldnames = ['column1', 'column2', 'column3']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()
+
+# Add some rows of data to the file
+with open(file_name, 'a', newline='') as csvfile:
+    fieldnames = ['column1', 'column2', 'column3']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+    writer.writerow({'column1': 'data1', 'column2': 'data2', 'column3': 'data3'})
+    writer.writerow({'column1': 'data4', 'column2': 'data5', 'column3': 'data6'})
