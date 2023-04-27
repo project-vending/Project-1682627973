@@ -1,0 +1,15 @@
+python
+import os
+
+# Define the filename and folder
+folder = 'raw-data'
+filename = 'raw-data_file_4.csv'
+
+# Check if the folder exists
+if not os.path.exists(folder):
+    # If the folder does not exist, create it
+    os.makedirs(folder)
+    
+# Create the empty file
+with open(os.path.join(folder, filename), 'w') as f:
+    pass
