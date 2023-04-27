@@ -1,0 +1,10 @@
+
+import os
+
+filename = "raw-data/raw-data_file_3.csv"
+if os.path.exists(filename):
+    with open(filename, 'r') as f:
+        content = f.read()
+    print(content)
+else:
+    print("File does not exist")
