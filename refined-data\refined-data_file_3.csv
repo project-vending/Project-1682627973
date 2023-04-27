@@ -1,0 +1,11 @@
+python
+import os
+
+folder = "refined-data"
+filename = os.path.join(folder, "refined-data_file_3.csv")
+
+# Open the file and perform operations
+with open(filename, "w") as f:
+    # Perform write or read operations here
+    f.write("New data")
+
