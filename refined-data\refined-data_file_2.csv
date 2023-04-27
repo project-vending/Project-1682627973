@@ -1,0 +1,14 @@
+python
+import csv
+
+# Define the path to the file
+file_path = 'refined-data/refined-data_file_2.csv'
+
+# Open the file in read mode
+with open(file_path, 'r') as f:
+    # Read the contents of the file using csv reader
+    csv_reader = csv.reader(f)
+    # Loop through each row in the file
+    for row in csv_reader:
+        # Do something with the row, for example, print the row
+        print(row)
