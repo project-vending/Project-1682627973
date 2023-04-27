@@ -1,0 +1,19 @@
+python
+import os
+
+folder = 'curated-data'
+filename = os.path.join(folder, 'curated-data_file_3.csv')
+
+# Check if the file already exists
+if os.path.exists(filename):
+    # File exists, modify it
+    with open(filename, 'a') as f:
+        f.write('New data row\n')
+else:
+    # File does not exist, create it and add header row
+    with open(filename, 'w') as f:
+        f.write('Column 1,Column 2,Column 3\n')
+        f.write('Data row 1,Data row 2,Data row 3\n')
+        f.write('Data row 4,Data row 5,Data row 6\n')
+        # Add new data row
+        f.write('New data row\n')
