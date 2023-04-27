@@ -1,0 +1,12 @@
+
+import csv
+import os
+
+# Set the file name and path
+filename = 'curated-data/curated-data_file_1.csv'
+
+# Create the file if it does not exist
+if not os.path.exists(filename):
+  with open(filename, 'w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['Data Column 1', 'Data Column 2', 'Data Column 3'])
