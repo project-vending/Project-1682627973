@@ -1,0 +1,17 @@
+
+import os
+
+folder = 'refined-data'
+filename = 'refined-data_file_1.csv'
+
+if not os.path.exists(folder):
+    os.makedirs(folder)
+
+filepath = os.path.join(folder, filename)
+
+if not os.path.exists(filepath):
+    with open(filepath, 'w') as f:
+        pass
+    print(f"File created: {filepath}")
+else:
+    print(f"File already exists: {filepath}")
