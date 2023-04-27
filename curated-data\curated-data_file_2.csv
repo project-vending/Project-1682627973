@@ -1,0 +1,14 @@
+
+import os
+
+# Define the file path
+file_path = os.path.join('curated-data', 'curated-data_file_2.csv')
+
+# Check if the file exists
+if os.path.isfile(file_path):
+    print('File already exists')
+else:
+    # Create the file
+    with open(file_path, 'w') as f:
+        f.write('')  # Write an empty string to the file to create it
+        print('File created:', file_path)
